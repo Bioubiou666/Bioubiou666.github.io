@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang=fr>
+    <head>
+        <title>Test AAA</title>
+        <meta charset="UTF-8">
+        <!--exemple de CSS dans la page html-->
+        <link rel="stylesheet" href="baseCSS.css">
+        <!--ou ça-->
+        <style>
+            h1{
+                color: yellow;
+            }
+        </style>
+        <!--Derniere possibilité : z-->
+
+    </head>
+    <body style="background-color:powderblue;">
+        <!--le css peut etre a 3 endroit : (trié par ordre de priorité)
+        1- dans la balise directement avec style="type: value"  -> pas recommandé mieux vaut utiliser ID
+        2- entre les balises head (voir en haut)                -> ZZZ
+        3- dans un fichier.css (voir en haut)                   -> recommandé
+    
+        /!\ attention dans <head> il execute en priorité le dernier déclaré !
+        donc pour simplifier vaut mieux <link> puis <style> -->
+
+        <p id="p1">Paragraphe 1 ?</p>
+        <p class="p1">Paragraphe 2 ?</p>
+        <p class="p1" id="p2">Paragraphe 3 ?</p>
+        <!--si il y a conflit il choisi le plus précis : ici c'est l'id-->
+
+
+        
+        <!--Le comportement du css peut varier en fontion du type d'element :
+                -> Element de type block : se genere generalement sur une nouvelle ligne et le CSS a effet sur toute la ligne
+                -> Element de type in-line : se genere à la suite de l'element precedent et le CSS fait effet que sur la place dont il a besoin
+        -->
+
+
+        <h1>C'est un titre</h1>
+        <h1 style="font-size:60px;">Titre 1</h1>
+        <h1 style="font-size:300%;">Titre 2</h1>
+        <!--regler taille titre-->
+
+        <p style="color:red;">Post emensos insuperabilis expeditionis eventus languentibus partium 
+        animis, quas periculorum varietas fregerat et laborum, nondum tubarum 
+        cessante clangore vel milite locato per stationes hibernas, fortunae 
+        saevientis procellae tempestates alias rebus infudere communibus per 
+        multa illa et dira facinora Caesaris Galli.</p>
+
+        <p style="font-family:courier;">This is a paragraph.</p>
+        <!--police-->
+        <p style="text-align:center;">C'est un paragraphe.</p>
+        <!--position texte
+        text-align: start;
+        text-align: end;
+        text-align: left;
+        text-align: right;
+        text-align: center;
+        text-align: justify;
+        text-align: justify-all; (derniere ligne justifiée aussi)
+        text-align: match-parent; -->
+
+        <p><b>Texte gras</b></p>
+        <p><i>Texte italique</i></p>
+        <p>Voici un <sub>indice</sub> et un <sup>exposant</sup></p>
+        <!-- ATTENTION ne sert que pour donner une importance pour la recherche (exemple google)
+        mais ne pas s'en servir pour ajouter du style (à gerer avec le css)
+
+            <b>- Texte en gras
+            <strong>- Texte important (souvent gras)
+            <i>- Texte en italique
+            <em>- Texte mis en avant (souvent en italique)
+            <mark>- Texte surligné
+            <small>- Texte plus petit
+            <del>- Texte rayé
+            <ins>- Texte inseré dans un doc (souvent souligné)
+            <sub>- Texte en indice
+            <sup>- Texte en exposant-->
+
+
+        <p title="Je suis une info-bulle">Je suis un paragraphe.</p> 
+        <!--Pour info-bulle
+        Attention
+        'John "ShotGun" Nelson'
+        "<" s'ecrit &lt; et ">" s'ecrit &gt;
+        "&" s'ecrit &amp;
+        " " s'ecrit &nbsp; -->
+
+        <br>
+        <!--retour ligne-->
+
+        <img src="www.jpg" alt="texte alt" width="200" height="142">
+        <!--il est conseillé d'avoir directement l'image a la bonne dimension pour ne pas envoyer des données inutiles-->
+
+
+        <!--Lien externe et interne-->
+        <p>Cliquez <a href="http://www.w3schools.com">ici</a> pour vous rendre sur la page d'acceuil de W3Schools.</p>
+
+        <p>Cliquez sur <a href="page1.html">le lien 1</a> pour aller sur une page du meme dossier</p>
+        <p>Cliquez sur <a href="sous/page2.html">le lien 2 enfant</a> pour aller sur une page d'un sous dossier</p>
+        <!--sous dossier : "sous"-->
+        <p>Cliquez sur <a href="../page3.html">le lien 3 parent</a> pour aller sur une page d'un dossier supérieur</p>
+        <!--le dossier superieur : "parent" et ajouter autant "../" que l'on veut remonter de dossiers-->
+
+        <p>Cliquez sur <a href="page1.html" target="_blank">le lien 4</a> pour ouvrir sur une autre fenetre</p>
+        <!--ouverture dans une nouvelle fenetre : ajouter " target="_blank" " dans la balise <a> -->
+
+        <p>Accès direct à notre ancre <a href="#ancre1">ancre1"</a></p>
+        <h2 id="ancre1">Une première ancre<br><br><br><br></h2>
+        <!--permet d'emmener vers un endroit de la page définit par l'id : peut servir pour un sommaire-->
+
+        <p>M'envoyer <a href="mailto:test@test.net">un mail</a></p>
+        <!--Permet à l'utilisateur d'envoyer un mail-->
+
+        <p>Télécharger <a href="nom_du_fichier.extansion">mon fichier</a></p>
+        <!--Permet a l'utilisateur de telecargher facilement un fichier comme des pdf-->
+
+
+        <hr>
+        <!--ligne continue horizontale-->
+
+        <pre>
+              aaa
+	        rrttt  
+        </pre>
+        <!--preserve le format du texte-->
+
+
+        <ul>
+            <li>Pomme</li>
+            <li>Vélo</li>
+            <li>Guitare</li>
+        </ul>
+        <!--fait une liste liste non-ordonnée-->
+
+        <ol type="A">
+            <li>Introduction</li>
+            <li>Partie I</li>
+            <li>Partie II</li>
+            <li>Partie III</li>
+        </ol>
+        <!--fait une liste liste ordonnée
+        
+        type="*" facultatif
+        Valeur possible :
+        I- Chiffres romain majuscules
+        i- Chiffres romain minuscules
+        A- Lettres majuscules
+        a- Lettres minuscules -->
+
+        <dl>
+            <dt>HTML</dt>
+            <dd>HTML signifie BLABLABLA</dd>
+            <dt>CSS</dt>
+            <dd>CSS signifie BLABLABLA2</dd>
+        </dl>
+
+        <!--fait une liste de definition/description-->
+
+        <ol>
+            <li>Partie I
+                <ul>
+                    <li>Définitions</li>
+                    <li>Auteurs</li>
+                    <li>Exemples</li>
+                </ul>
+            </li>
+            <li>Partie II</li>
+            <li>Partie III</li>
+        </ol>
+        <!--Ex: On peut imbriquer des listes entre elles memes-->
+
+
+
+        <!--div est un element de type block-->
+        <div class="div-para">
+            <p>L'élément p est de type block</p>
+            <p>Un <strong>autre</strong> paragraphe</p>
+        </div>
+
+        <!--span est un element de type in-line-->
+        <p>Un <span class="span-trois">troisième</span> paragraphe</p>
+        
+
+
+    </body>
+</html>
+
+
+
+

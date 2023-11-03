@@ -1,0 +1,89 @@
+/*Commentaire en CSS
+  -> feuille d'info
+
+NOTION IMPORTANTE :
+il y a héritage des éléments CSS contenu dans un balise parent (ex: <p> dans <body> alors <p> herite de <body> ses éléments)
+si il y a conflit entre des élément CSS il choisi le plus précis (voir exemple)*/
+
+
+/*il vaut mieux priviligier le selecteur simple mais sont limités*/
+
+/*EXEMPLE selecteur de type element :*/
+body{
+    font-family: "Century Gothic", Verdana, sans-serif;
+}   /*possibilité d'utiliser les font de google*/
+
+h1{
+    color: green;
+}
+
+p{
+    margin: 0px;
+    /*color: purple;*/
+}
+
+
+
+/*EXEMPLE selecteur de type complexe :*/
+h2, h3{
+    color:brown;
+}
+
+/*id -> dans les autres balises HTML chaque id doit etre différent*/
+#p1{
+    color: blue;
+}
+
+#p2{
+    font-weight: bold;
+}
+
+/*class -> dans les autres balises HTML on peut réutiliser une class*/
+.p1{
+    color: blueviolet;
+}
+
+.div-para{
+    background-color: #88BB11;
+    font-weight: bold;
+}
+
+.span-trois{
+    color: blue;
+}
+/*
+valeur de type absolue/fixe : px (pixel) (ou pt (point))
+valeur de type relative : % (ou em ou ex)
+
+PRINCIPALES PROPRIETES DE "font" : (depends de la police utilisé)
+font-size           pour modifier la taille
+font-style          pour modifier le style selon 4 types :normal, italic, oblique, inherit (oblique force la police a etre en italique)
+font-weight         pour modifier le poid selon : normal, lighter, bold, bolder, inherit, initial et peut prendre une valeur entre 100 et 900 (400 = normal, 700 = bold et avant 400 peut mal fonctionner)
+*/
+
+
+/*
+color               pour modifier la couleur selon 3 types :
+                        - mot clef comme "red",
+                        - en en hexadecimal de  #000000 à #FFFFFF(RGB), attention par ex : #F0F = #FF00FF
+                        - en RGB de base 10 sous le format RGB(000, 000, 255); de 000 à 255 et si on ecrit RGBa(000, 255, 255, 0.7) 0.7 defini l'opocite (1 par defaut jusqu'a 0)
+
+opacity             pour modifier l'opacite : entre 0 et 1 (1 par defaut jusqu'a 0) ex : 0.2
+*/
+
+
+/* PRINCIPALES PROPRIETES DE "text" : (mise en forme du texte et ne depend pas de la police utilisée)
+text-align          z
+text-transform      z
+text-decoration     z
+text-indent         z
+text-shadow         z
+*/
+
+/*
+
+*/
+
+/*
+
+*/
